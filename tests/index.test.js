@@ -1,5 +1,11 @@
 const { increase } = require('../src/index.js');
 
 test('increase', function(){
-  // implement first test here
+  const arg = 10;
+  const inner = increase();
+  const result = inner(arg);
+
+  const expected = 12;
+
+  expect(result).toBe(expected);
 });

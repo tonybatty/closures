@@ -18,7 +18,7 @@
 
 * `gibberish` - Create a function which stores an empty string. Return an inner function which can accept either a string or an array of strings. If it's a string, add it to existing string separated by a space `' '`. If it's an array of strings join them using a space, append to existing string separated by a space and add a fullstop `.` at the end. The inner function should return the new resulting string.
 
-* `mergeSort` - Create a function which stores an empty array. Return an inner function which accepts a number as an argument. The inner function should insert the number into the array in descending order and return the highest number from array. Try to implement above without using `sort` method.
+* `mergeSort` - Create a function which stores an empty array. Return an inner function which accepts a number as an argument. The inner function should insert the number into the array in descending order and return the highest number from array.
 
 * `calculator` - Create a function which stores a `total` number. It should return an inner function which should accept 3 parameters: 2 numbers and a string representing an operator `+`, `-`, `*` or `/`. It should perform the operation indicated by the operator add the result to `total`. Return the new `total`.
 
