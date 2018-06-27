@@ -8,6 +8,8 @@
 * Commit after each exercise and push
 * Create a pull request
 
+## Exercises
+
 * `increase` - Create a function which stores a number. Return an inner function which accepts a number as an argument, adds it to the number in parent scope and returns the new total
 
 * `double` - Create a function which stores a number. Return an inner function which doubles the number and returns it
