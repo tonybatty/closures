@@ -13,3 +13,22 @@ function increase(){
 }
 
 exports.increase = increase;
+
+// Create a function which stores a number. Return an inner function which doubles the number and returns it
+
+function double() {
+
+  let number = 2;
+
+  function inner(newNumber) {
+    number = newNumber * number;
+    return number;
+  }
+
+  return inner;
+}
+
+exports.double = double;
+
+// Create a function which receives and stores total number. Return an inner function which accepts an array of numbers. The inner function should add all the numbers in array, add them to total and return the new total.
+
