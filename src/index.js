@@ -32,3 +32,15 @@ exports.double = double;
 
 // Create a function which receives and stores total number. Return an inner function which accepts an array of numbers. The inner function should add all the numbers in array, add them to total and return the new total.
 
+function total(totalNumber){
+  let total = totalNumber;
+
+  function inner(arrNum){
+    total += arrNum.reduce((a,b)=>a+b)
+    return total;
+  }
+  
+return inner;
+}
+
+exports.total = total;
