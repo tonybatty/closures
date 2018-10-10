@@ -1,4 +1,4 @@
-const { increase, double, total } = require('../src/index.js');
+const { increase, double, total, gibberish } = require('../src/index.js');
 
 test('increase', function(){
   const arg = 10;
@@ -27,6 +27,26 @@ test('total', function(){
   const result = inner(arrNum);
 
   const expected = 100;
+
+  expect(result).toBe(expected);
+})
+
+test('gibberish', function(){
+  const string = "orange";
+  const inner = gibberish();
+  const result = inner(string);
+
+  const expected = " orange";
+
+  expect(result).toBe(expected);
+})
+
+test('gibberish2', function(){
+  const array = ["orange", "blue", "red", "yellow"];
+  const inner = gibberish();
+  const result = inner(array);
+
+  const expected = "orange. blue. red. yellow";
 
   expect(result).toBe(expected);
 })
