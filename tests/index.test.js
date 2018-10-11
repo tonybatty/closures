@@ -131,3 +131,32 @@ test("trainStation", function() {
 
 });
 
+test('shop', function(){
+  const newStock = [
+    {burger:
+      {name: 'burger', quantity: 3, price: 5}}, 
+      {fries: 
+    {name: 'fries', quantity: 4, price: 3}},
+    {salad:
+    {name: 'salad', quantity: 1, price: 7}}
+]
+  const additionalStock= [
+    {chicken:
+    {name: 'chicken', quantity: 4, price: 3}},
+   { salad:
+    {name: 'salad', quantity: 3, price: 5}}
+  ]
+
+  const {addStock, sellStock, getRevenue} = shop();
+  const resultaddStock1 = addStock(newStock);
+  const resultaddStock2 = addStock(additionalStock);
+  const expectedAddStock = [
+    {name: 'burger', quantity: 3, price: 5}, 
+    {name: 'fries', quantity: 4, price: 3},
+    {name: 'chicken', quantity: 4, price: 3},
+    {name: 'salad', quantity: 4, price: 6}
+];
+  expect(resultaddStock2).toEqual(expectedAddStock);
+
+
+})

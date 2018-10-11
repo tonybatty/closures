@@ -150,3 +150,31 @@ function trainStation(peopleArray) {
 }
 
 exports.trainStation = trainStation;
+
+
+function shop(){
+
+  let storage = {};
+  let revenue = 0;
+
+  function addStock(stock){
+    stock.map(item => {
+      if(storage.hasOwnProperty(item)){
+        
+      }
+    })
+  }
+
+  function sellStock(){
+
+  }
+
+  function getRevenue(){
+
+  }
+
+  return {addStock, sellStock, getRevenue}
+}
+
+
+exports.shop = shop;
