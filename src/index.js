@@ -68,8 +68,9 @@ function mergeSort(num) {
   let arr = [];
 
   function inner(num){
-    const result = arr.push(num).sort((a,b)=>a-b);
-    return result;
+    arr.push(num);
+    arr.sort((a,b)=>a-b);
+    return arr;
   }
   return inner;
 }

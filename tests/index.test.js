@@ -56,11 +56,11 @@ test('mergeSort', function(){
   const b = 2;
   const c = 3;
   const inner = mergeSort();
-  let result = inner(c);
-  result = inner(a);
-  result = inner(b);
+  const result1 = inner(c);
+  const result2 = inner(a);
+  const result3 = inner(b);
 
   const expected = [1, 2, 3];
 
-  expect(result).toBe(expected);
+  expect(result3).toEqual(expected);
 })
