@@ -1,4 +1,4 @@
-const { increase, double, total, gibberish, mergeSort, calculator } = require('../src/index.js');
+const { increase, double, total, gibberish, mergeSort, calculator, dogHome } = require('../src/index.js');
 
 test('increase', function(){
   const arg = 10;
@@ -74,4 +74,28 @@ test('calculator', function() {
   const expected = 127;
   expect(result).toBe(expected);
 
+})
+
+test("dogHome", function(){
+  const dogs={
+    1:{
+      name: 'Snoopy',
+      breed: 'setter',
+      colour: 'red',
+      location: 'Surrey'
+  },
+    2:{
+      name: 'Buster',
+      breed: 'rottweiler',
+      colour: 'black and brown',
+      location: 'Surrey'
+  }
+};
+
+  const inner = dogHome();
+  const result = inner(dogs);
+  const expected = {
+    Surrey: ['Snoopy', "Buster"]
+    }
+  expect(result).toEqual(expected);
 })

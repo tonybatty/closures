@@ -103,3 +103,20 @@ function calculator(num1, num2, operator) {
 
 exports.calculator = calculator;
 
+function dogHome(dogs){
+  let result = {}
+
+  function inner(dogs){
+    Object.keys(dogs).forEach(key =>{
+      if(!result.hasOwnProperty([dogs[key].location])){
+        result[dogs[key].location]=[dogs[key].name]
+      } else{
+        result[dogs[key].location].push(dogs[key].name)
+      }
+    })
+    return result
+  }
+  return inner;
+}
+
+exports.dogHome = dogHome;
